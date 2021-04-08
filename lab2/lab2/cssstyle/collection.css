@@ -1,0 +1,68 @@
+#main{
+       display: flex;
+       flex-flow: row nowrap ;
+}
+#slidebar{
+       color: rgb(79, 63, 151,0.9);
+       font-size: 1em;
+       margin-top: 40px;
+       min-width: 400px;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       margin-left: auto;
+       margin-right: auto;
+       padding-left: 30px;
+       line-height: 3em;
+}
+#subtitle{
+       margin: 0;
+       border: 0;
+       padding: 0;
+       margin-top: 40px;
+       padding-left: 30px;
+       color: rgb(79, 63, 151); 
+       font-family: 'Times New Roman', Times, serif;
+       border-bottom: dashed 1px rgb(79, 63, 151,0.6) ;
+}
+form input{
+       width: 250px;
+}
+ 
+
+#blocks_col  .block{
+       display: flex;
+       flex-flow: row nowrap;
+       margin: 0;
+       padding: 0;
+       background-color: rgb(192, 210, 223,0.4);
+       margin-top: 40px;
+       margin-bottom: 40px
+}
+#blocks_col  .block .figure{
+       align-self: center;
+       margin-top: auto;
+       margin-bottom: auto;
+}
+
+#blocks_col  .block .figcap{
+       background-color: rgb(192, 210, 223,0.7);
+       margin-left: 0;
+       padding-left: 30px;
+       padding-top:20px;
+       padding-bottom:20px;
+       margin-top: 30px;
+       margin-bottom: 30px;
+}
+
+#blocks_col .block{
+       display: flex;
+       flex-flow: row nowrap;
+       margin: 0;
+       padding: 0;
+       background-color: rgb(192, 210, 223,0.4);
+       margin-top: 40px;
+       margin-bottom: 40px;
+}
+.figcap{
+       line-height: 2em;
+}
+ 

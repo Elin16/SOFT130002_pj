@@ -1,0 +1,14 @@
+
+nav #search{
+       color: cornflowerblue;
+       background-color: rgba(100,149,237,0.3);
+}
+form{
+       margin-bottom: auto;
+       margin-right: auto;
+}
+form input{
+       margin-top: 200px;
+       margin-left: 400px;
+       margin-bottom: 200px;
+}

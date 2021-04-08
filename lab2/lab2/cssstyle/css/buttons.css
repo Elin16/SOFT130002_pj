@@ -1,0 +1,89 @@
+
+.button,button[type=button]{
+       display: inline-block;  
+       margin-right: 25px;
+       padding: 10px;
+     
+}
+.button,button[type=button]{
+       font-weight: 600;
+       text-decoration: none;
+       border-radius: 5px 25px 5px 25px; 
+       text-align: center;
+       border: 1px transparent;
+       font-family: 'Courier New', Courier, monospace;  
+       text-decoration: underline transparent;
+       border: dashed 1px  transparent;
+}
+.button,button[type=button]{
+       color: #1EAEDB; 
+       background-color: rgba(191, 231, 231, 0.3);
+}
+.button:hover,button[type=button]:hover{
+       cursor: pointer;
+       border: dashed 1px  rgb(136, 155, 175);
+}
+.button:hover,button[type=button]:hover{
+       background-color: rgba(169, 207, 207, 0.5); 
+       color: #0d89af; 
+}
+ 
+.athbut{
+       display: inline-block;
+}
+.athbut{
+       text-decoration: none;
+       text-align: center;
+       border: none;
+       border-bottom: solid 1px transparent;
+       transition-property: border-bottom; 
+       transition-duration: 1s;
+}
+.athbut:hover{
+       cursor: pointer;
+       border-bottom: 1px solid rgb(136, 155, 175);
+}
+
+.athbut{
+       color: rgb(24, 22, 22,0.8);
+}
+.athbut:hover{
+       color: rgb(24, 22, 22,0.3);
+}
+ 
+
+input[type=submit],button[type=submit]{
+       border: none;
+       background-color: transparent;
+       outline: none;
+       background-color: rgb(52, 233, 133,0.6);
+       width: fit-content;
+       border-style: none;
+       color: rgba(24, 70, 34,0.5);
+       font-family: 'Courier New', Courier, monospace;
+       cursor: pointer;
+       font-size: 1em;
+       font-weight: bold;
+}
+input[type=submit]:active,button[type=submit]:active{
+       background-color: rgb(52, 233, 133,0.9);
+       width: fit-content;
+       border-style: none;
+       color: rgba(24, 70, 34,0.8);
+       font-family: 'Courier New', Courier, monospace;
+       cursor: pointer;
+       font-size: 1em;
+       font-weight: bold;
+}
+input[type=submit]:hover,button[type=submit]:hover{
+       background-color: rgb(52, 233, 133,0.8);
+       width: fit-content;
+       border-style: none;
+       color: rgba(24, 70, 34,0.8);
+       font-family: 'Courier New', Courier, monospace;
+       cursor: pointer;
+       font-size: 1em;
+       font-weight: bold;
+}
+
+

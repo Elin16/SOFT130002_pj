@@ -1,0 +1,47 @@
+
+#main{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:row nowrap;
+       flex-flow: row nowrap;
+       justify-content: center;
+       align-content: space-around;
+       align-items:center ;
+       padding-bottom: 40px;
+       padding-top: 40px;
+}
+.artwork{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:row wrap;
+       flex-flow: row wrap;
+       align-items:center ;
+}
+.artwork{
+       font-family:'Times New Roman', Times, serif;
+       font-size: large;
+}      
+.figure{
+       margin-right: 0;
+}
+.figcap{
+       width: 50%;
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:column wrap;
+       flex-flow: column wrap;
+       margin-left: 100px;
+       padding-right: 20px;
+       margin-right: 0;
+
+}
+.figcap button{
+       width: fit-content;
+}
+.tinfo{
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       letter-spacing: 0.1em;
+}
+.info{
+       letter-spacing: 0.2em;
+}

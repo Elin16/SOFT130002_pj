@@ -1,0 +1,110 @@
+*{
+       box-sizing: border-box;
+}
+ 
+body{
+       width: 1280px;
+       min-width: 800px;
+}
+#allcontent{
+       margin-left: auto;
+       margin-right: auto;
+     /*  background-color: rgba(220, 245, 228,0.3);/*I like this color*/
+}
+
+header{
+       border-radius: 5px;
+       padding: 3%;
+       
+}
+#main{
+       min-height: 400px;
+       padding-bottom: 40px;
+       padding-left: 30px;
+}
+
+#top,#main,footer,#blocks_row{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:row wrap;
+       flex-flow: row wrap;
+}
+ 
+#sign{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:column wrap;
+       flex-flow: column wrap;
+       margin-right: auto;
+}
+nav,form{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:row nowrap;
+       flex-flow: row nowrap;
+}
+nav{
+       justify-content: space-around;
+       align-items: flex-end;
+       max-width: 450px;
+       margin-left: 50px;
+}
+form{
+       justify-content: space-around;
+       align-items: center;
+}
+#blocks_row .block{
+       flex:1 1 250px;
+       margin:10px;
+       border-radius: 5px;
+       padding: 10px 10px 0px 10px;
+       line-height: 2em;
+       text-indent: 2em;
+ }
+ #blocks_row .block,#blocks_row .block .outfig{
+       display: flex;
+       flex-flow: column;
+
+ }
+ #blocks_row .block .outfig{
+       height: 400px;
+      
+       align-content: space-between;
+ }
+ #blocks_row .block .outfig .funcbutton{
+       margin-top: auto;
+       align-self: center;
+ }
+/* 
+
+ 
+.outfig{
+       margin-top: auto;
+}
+/*
+.block .button{
+       margin-top: auto;
+}
+
+.button{  
+       padding: 8px 2%;
+       white-space: nowrap;
+       margin-left: 50px;
+       margin-right: 50px;
+       width: 8%;
+       margin-top: auto;   
+}
+
+#bottomfuc{
+       display: flex;
+       flex-flow: row nowrap;
+       align-content: center;
+       margin-bottom: 20px;
+       min-height: 40px;
+}
+*/
+footer{
+       width: 100%;
+       padding-left: 35%;
+       padding-right: 35%;
+} 
