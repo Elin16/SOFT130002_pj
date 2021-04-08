@@ -1,0 +1,34 @@
+.outfig{
+       line-height: 2em;
+       padding-left: 60px;
+       display: flex;
+       flex-flow: column;
+       background-image: linear-gradient(to left, rgba(215, 243, 250, 0.5),rgba(245, 248, 248,0.8));
+       padding-top: 10px;
+}
+.figure{
+       padding: 0;
+       margin: 0;
+       display: inline-block;
+       padding-top: 10px;
+}
+.result{
+       display: flex;
+       flex-flow: row nowrap ;
+       justify-content: space-between;
+       margin-bottom: 40px;
+       padding-bottom: 10px;
+}
+#main{
+       display: flex;
+       flex-flow: column;
+       min-height: 600px;
+       align-items: center;
+       height: 1700px;
+}
+#subtitle{
+       align-self: flex-start;
+}
+#funcbutton{
+       align-self: reverse end;
+}

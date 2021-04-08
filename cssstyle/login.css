@@ -1,0 +1,56 @@
+ 
+#main{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:column wrap;
+       flex-flow: column wrap;
+       margin-right: auto;
+       text-align: center;
+       line-height: 4em;
+}
+ 
+form{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:column wrap;
+       flex-flow: column wrap;
+       margin-right: auto;
+       margin-left: auto;
+       text-align: center;
+       margin-bottom: 40px;
+       margin-top: 80px;
+}
+form input[type=submit]{
+       width: 500px;
+} 
+form input[type=submit]:hover{
+       width: 500px;
+} 
+.title{
+       font-family: 'Courier New', Courier, monospace;
+       font-size: 400%;
+       letter-spacing: normal;
+       word-spacing: normal;
+}
+#top{
+       text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+}
+
+#main{
+       background-color: rgba(245, 248, 248,0.8);
+       min-height: 500px;
+}
+.cap{
+       border:1px;
+       border-radius: 4px;
+       margin-right: 50px;
+       display: inline-block;
+       margin-bottom: 5px;
+}
+
+.captab{  
+       margin-bottom: 5px;
+        
+}

@@ -1,0 +1,41 @@
+#container,#main{
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:column wrap;
+       flex-flow: column wrap;
+       align-items: center;
+       align-content: space-around;
+      
+}
+#main a{
+       display: inline-block;
+       text-decoration: none;
+}
+#container{
+       min-height: 350px;
+       width: 100%;
+}
+#container input{
+       display: block;
+       margin-bottom: 3%;
+       margin-left: auto;
+       margin-right: auto;
+       width: 400px;
+       height: 40px;     
+}
+#funcbutton{
+       padding: 5px;
+       margin-bottom: 30px;
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow:row wrap;
+       flex-flow: row wrap;
+       align-items: center;
+       align-content: space-around;
+}
+#funcbutton a{
+       padding: 0;
+       margin-left: 20px;
+}
+   
+ 

@@ -1,0 +1,134 @@
+
+#allcontent{
+      
+     /*  background-color: rgba(220, 245, 228,0.3);/*I like this color*/
+       font-size: medium;
+       font-family: 'Courier New', Courier, monospace;
+}
+.style{
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#logo{
+       font-size:500%;
+       font-weight: 700;
+       text-shadow: 3px 3px 3px rgb(143, 150, 150);
+       letter-spacing: 0.2em;
+       font-family: 'Courier New', Courier, monospace;  
+}
+#slogan{
+       font-size: 120%;
+       font-weight: 600;
+       text-shadow: 1px 1px 3px rgb(143, 150, 150);
+      /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+       letter-spacing: 0.1em;
+}
+/*
+ button[type=button],
+.more ,nav .button,.func{
+       display: inline-block;
+       font-weight: 600;
+       text-decoration: none;
+       border-radius: 5px 25px 5px 25px; 
+       text-align: center;
+       border: 2px transparent;
+       font-family: 'Courier New', Courier, monospace;  
+       
+}
+ 
+button[type=button]:hover,
+.more:hover ,nav .button:hover,.athbut:hover,.func:hover{
+       cursor: pointer;
+}
+button[type=button]:hover,
+.more:hover ,nav .button:hover,.func:hover{
+       text-decoration: underline rgb(136, 155, 175);
+       border: dashed 2px  rgb(136, 155, 175);
+}
+*/
+em{
+       font-weight: bold;
+}
+h1{
+       font-size: bold;
+       letter-spacing: 0.2em;
+       font-size: 300%;
+       font-family:'Courier New', Courier, monospace;
+}
+h2{
+       letter-spacing: 0.2em;
+       font-size: 200%;
+       font-family:'Courier New', Courier, monospace;
+}
+#blocks_row .block{
+       word-break:keep-all;       
+       font-size: 100%;
+}
+.title{
+       text-indent:0;
+       word-spacing: 0.3em;
+       text-align: center;
+       font-size: 150%;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.artist{
+       text-indent:0;
+       word-spacing: 0.3em;
+       text-align: center;
+       font-size: 120%;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+       text-align: center;
+       font-size: smaller;
+       line-height: 1.9em;   
+} 
+#subtitle{
+       font-size: xx-large;
+       font-weight: bold;
+}
+       
+input{
+       width: 400px;
+       height: 40px;
+}
+
+#blocks_col{
+       display: flex;
+       flex-flow: column wrap;
+}
+form input,form button{
+       height: 55px;
+       border-left:solid 2px rgb(51, 214, 119) ;
+       border-radius: 0 0 0 20px ;
+}
+form input:hover{
+       border-bottom:solid 2px rgb(51, 214, 119) ;
+}
+form input:focus{
+       border: none;
+       text-decoration: none;
+       background-color: rgba(51, 214, 119,0.1);
+       border-left:solid 2px rgb(51, 214, 119) ;
+       border-bottom:solid 2px rgb(51, 214, 119) ;
+}
+form button{
+       padding-left: 20px;
+       padding-right: 20px;
+       border-radius: 0  20px 0 0;
+}
+input,input[type=text]{
+       font-family: 'Courier New', Courier, monospace;
+}
+#subtitle{
+      
+       color: rgba(86, 133, 177, 0.9); 
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       letter-spacing: 0em;
+       margin-bottom: 30px;
+}
+#subtitle em{
+       font-family: 'Courier New', Courier, monospace;
+       color: rgb(51, 145, 223);
+       letter-spacing: 0.01em;
+}

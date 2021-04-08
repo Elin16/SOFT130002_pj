@@ -1,0 +1,17 @@
+
+#main{
+       display: flex;
+       flex-flow: column;
+       min-height: 400px;
+       align-items: flex-start;
+       justify-content: space-between;
+       padding-left: 50px;
+}
+#bottomfuc{
+       display: flex;
+       flex-flow: row nowrap;
+       justify-content: center;
+}
+#subtitle{
+       align-self: flex-start;
+}
