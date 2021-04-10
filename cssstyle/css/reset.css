@@ -35,7 +35,7 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
-}
+}/*
 a:link,a:visited,a:hover,a:active{
 	text-decoration: none;
 	outline: none;
@@ -46,7 +46,7 @@ a:link,a:visited,a:hover,a:active{
     	padding: 0;
     	font-size: 100%;
 	
-}
+}*/
 button ,.button,input[type=button]{
 	border: 0;
  	background-color: transparent;

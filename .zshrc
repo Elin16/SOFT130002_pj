@@ -1,0 +1,1 @@
+source .z_profile
