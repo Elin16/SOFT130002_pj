@@ -6,6 +6,55 @@
 	<link type="text/css" rel="stylesheet" href="../cssstyle/css/global.css">
 	<link type="text/css" rel="stylesheet" href="../cssstyle/login.css">
 	<link type="text/css" rel="stylesheet" href="../cssstyle/register.css">
+	<script>
+		function validateForm(){
+			var validate=1;
+  			var x=document.forms["myForm"]["email"].value;
+  			var atpos=x.indexOf("@");
+  			var dotpos=x.lastIndexOf(".");
+  			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+    				alert("不是一个有效的 e-mail 地址");
+    				validate=0;
+			}
+			var x=document.forms["myForm"]["username"].value;
+			if (x==null || x==""){
+				alert("Usename must be filled");
+				validate=0;
+			} 
+			var x=document.forms["myForm"]["area"].value;
+			if (x==null || x==""){
+				alert("Area must be filled");
+				validate=0;
+			} 
+			var x1=document.forms["myForm"]["password"].value;
+			if (x1==null || x1==""){
+				alert("Usename must be filled");
+				validate=0;
+			}
+			var numberCheck=/\d+/;
+			var stringCheck=/[a-zA-Z]/;
+			if(!numberCheck.test(x1)||!stringCheck.test(x2)){
+				alert("Password must include both Number and Letter");
+				validate=0;
+			}
+			var x2=document.forms["myForm"]["passwordagain"].value;
+			if (x2==null || x2==""){
+				alert("Password must be filled again");
+				validate=0;
+			}
+			if(x1!=x2){
+				alert("The tow password DONOT match!");
+				validate=0;
+			} 
+			
+			return validate;
+		}
+		function submitForm(){
+			var x=validateForm();
+			if(x==1) alert("You are a member of ArtStore now !");
+			else alert("Please fill the form correctly ");
+		}
+	</script>
 </head>
 <body id="allcontent">
 	 
@@ -15,13 +64,13 @@
 
 	<main id="main">
 		<div id="signup">
-			<form id="container">
+			<form id="container" name="myForm" onsubmit="submitForm();">
 			  <label id="subtitle">Sign up for Art store</label>
-			  <input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+			  <input type="email" placeholder="test@mailbox.com" name="email">
 			  <input type="text" name="username" placeholder="username">
 			  <input type="text" name="area" placeholder="area">
-			  <input type="password" name="password" placeholder="password">
-			  <input type="password" name="password" placeholder="password again">
+			  <input type="password" name="password" placeholder="password   number and letter required ">
+			  <input type="password" name="passwordagain" placeholder="password again">
 			  <input class="button-primary" type="submit" value="Submit">
 			</form>
 		</div>

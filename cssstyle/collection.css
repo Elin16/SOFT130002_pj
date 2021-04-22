@@ -65,4 +65,11 @@ form input{
 .figcap{
        line-height: 2em;
 }
- 
+button[type=button]{
+       color: rgba(48, 48, 141,0.6);
+       background-color: rgba(100, 149, 237,0.4);
+}
+button[type=button]:hover{
+       color: rgba(48, 48, 141, 0.842);
+       background-color: rgba(59, 103, 186, 0.741);
+}
