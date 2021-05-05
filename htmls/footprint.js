@@ -3,19 +3,21 @@ function javascriptInhtml(){
         var HtmlFtp=document.getElementById("footprints");
         if(HtmlFtp==null) console.log("null of id ");
         var thishref=window.location.href.split("/");
-        ///console.log(thishref,"+++");
-        var thisfootprint="href_"+thishref[thishref.length-1]+"_eofhref"+"title_"+document.getElementsByTagName("title")[0].innerHTML+"_eoftitle";
-        //console.log("*******",thisfootprint,"*****");
+        var thisfootprint="href_"+thishref[thishref.length-1].split("?")[0]+"_eofhref"+"title_"+document.getElementsByTagName("title")[0].innerHTML+"_eoftitle";
         var src=getCookie();
         var footprints=src.split(";");
         if(footprints[0]==null||footprints[0]=="") footprints.shift();
-        //console.log(src,"+++++",footprints);
         var flag=-1;
         var len=footprints.length;
         //console.log("lengthoffootprint",len,footprints[0]);
         var content="";//"i am a default content";
-        for(var i=0;i<len;++i)
-        if(footprints[i]==thisfootprint) flag=i;
+        for(var i=0;i<len;++i){
+                //footprints[i]=trim(footprints[i]);
+                //console.log("---",footprints[i],"---",footprints[i].trim(),";");
+                if(footprints[i]==thisfootprint) flag=i;
+                else console.log("***",footprints[i],"----",thisfootprint,"\n");      
+        }
+        
         if(flag==-1){
                 footprints.push(thisfootprint);
                 flag=footprints.length-1;
@@ -33,7 +35,7 @@ function javascriptInhtml(){
                 // 检索
                 //document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
                 //document.cookie=" username = "+generateFootprints();
-                console.log("-------",generateFootprints(),"-------",sessionStorage.getItem("footprints"),"-------");
+                ///console.log("-------",generateFootprints(),"-------",sessionStorage.getItem("footprints"),"-------");
                 
         }
         //src=getCookie();
@@ -72,4 +74,4 @@ function javascriptInhtml(){
                 return nextsrc;
         }
 }
-window.onload=javascriptInhtml();
+javascriptInhtml();
