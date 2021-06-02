@@ -12,6 +12,24 @@
        display: inline-block;
        padding-top: 10px;
 }
+
+#main{
+       display: flex;
+       flex-flow: column;
+       min-height: 600px;
+       align-items: center;
+}
+#subtitle{
+       align-self: flex-start;
+}
+#funcbutton{
+       align-self: reverse end;
+}
+
+#results{
+       display: flex;
+       flex-direction:column;
+}
 .result{
        display: flex;
        flex-flow: row nowrap ;
@@ -19,16 +37,10 @@
        margin-bottom: 40px;
        padding-bottom: 10px;
 }
-#main{
+#searchButtons{
        display: flex;
-       flex-flow: column;
-       min-height: 600px;
-       align-items: center;
-       height: 1700px;
+       flex-flow: row nowrap ;
 }
 #subtitle{
        align-self: flex-start;
-}
-#funcbutton{
-       align-self: reverse end;
 }

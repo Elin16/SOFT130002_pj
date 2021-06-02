@@ -14,10 +14,11 @@ nav #home{
 #headimgback{
        width: 853px;
        height: 640px;
-       animation-name: change;
+       /*8animation-name: change;
        animation-duration: 15s;
-       animation-iteration-count: infinite;
+       animation-iteration-count: infinite;*/
 }
+
 #headimgback:hover{
        animation-play-state: paused;
 }
@@ -33,7 +34,7 @@ nav #home{
 .funcbutton{
        justify-self: end;
 }
-
+/*
 @-webkit-keyframes change{
        from{
               background-image: url(../resources/img/39.jpg);
@@ -69,3 +70,4 @@ nav #home{
               background-image: url(../resources/img/39.jpg);
        }
  }
+ */

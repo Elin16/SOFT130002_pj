@@ -15,27 +15,20 @@
 				<span id="slogan">Where you find <em>genius</em> and <em>extroordinary</em> </span>
 			</div>
 			<nav>
-				<button><a href="homepage.html" class="button" id="home">home</a></button>
-				<button><a href="search.html" class="button" id="search">search</a></button>
-				<button><a href="login.html" class="button" id="login">login</a></button>
-				<button><a href="register.html" class="button" id="register">register</a></button>
+			<?php include_once('../php/nav.php'); ?>
 			</nav>
 		</header>    
 		<main id="main">
 			<p id="subtitle">
                             No results for now...
                      </p>
-
 			<div id="bottomfuc">
-				<a href="homepage.html" class="button">Return to search</a> 
-				<a href="homepage.html" class="button">Homepage</a> 
+				<a href="  homepage.php" class="button">Return to search</a>
+				<a href="  homepage.php" class="button">Homepage</a>
 			</div>
 		</main>
 		<footer>
-				@ArtStore.Produced and maitained by Elinhuang at 2021.4.16<br>
-				增值电信作业提交许可证 复ss-20302010072号<br>
-				 Git备Elin16号 <br>
-				All rights reserved.<br>
+			<?php include_once('../php/footer.php'); ?>
 		</footer>
 	</body>	
 	<script src="footprint.js"></script>

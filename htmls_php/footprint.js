@@ -1,5 +1,4 @@
 function javascriptInhtml(){
-       
         var HtmlFtp=document.getElementById("footprints");
         if(HtmlFtp==null) console.log("null of id ");
         var thishref=window.location.href.split("/");
@@ -12,10 +11,8 @@ function javascriptInhtml(){
         //console.log("lengthoffootprint",len,footprints[0]);
         var content="";//"i am a default content";
         for(var i=0;i<len;++i){
-                //footprints[i]=trim(footprints[i]);
-                //console.log("---",footprints[i],"---",footprints[i].trim(),";");
                 if(footprints[i]==thisfootprint) flag=i;
-                else console.log("***",footprints[i],"----",thisfootprint,"\n");      
+                //else console.log("***",footprints[i],"----",thisfootprint,"\n");
         }
         
         if(flag==-1){
@@ -31,16 +28,7 @@ function javascriptInhtml(){
         function setCookie(){
                 sessionStorage.clear(); 
                 sessionStorage.setItem("footprints", generateFootprints());
-                //sessionStorage.setItem("lastname", "Smith");
-                // 检索
-                //document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
-                //document.cookie=" username = "+generateFootprints();
-                ///console.log("-------",generateFootprints(),"-------",sessionStorage.getItem("footprints"),"-------");
-                
         }
-        //src=getCookie();
-        //console.log("@@@",src);
-
         function getCookie(){
                 if(sessionStorage.getItem("footprints")==null) return "";
                 return sessionStorage.getItem("footprints");
@@ -66,10 +54,9 @@ function javascriptInhtml(){
         
         function generateFootprints(){
                 var nextsrc="";
-                for(var i=0;i<footprints.length-1;++i){
-                        nextsrc=nextsrc+footprints[i]+";";
+                for(var i=0;i<footprints.length-1;++i) {
+                        nextsrc = nextsrc + footprints[i] + ";";
                 }
-                //console.log("nextsrc:=",nextsrc);
                 nextsrc=nextsrc+thisfootprint;
                 return nextsrc;
         }

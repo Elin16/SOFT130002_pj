@@ -1,4 +1,6 @@
-
+#main{
+       display: flex;
+}
 #allcontent{
       
      /*  background-color: rgba(220, 245, 228,0.3);/*I like this color*/

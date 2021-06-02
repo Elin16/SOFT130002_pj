@@ -77,15 +77,12 @@
 			</form>
 		</div>
 	<div id="funcbutton">
-		<button><a href="login.html" class="button">Login for Artstore</a></button>
-		<button><a href="homepage.html" class="button">Return to Homepage</a></button>
+		<button><a href="login.php" class="button">Login for Artstore</a></button>
+		<button><a href="  homepage.php" class="button">Return to Homepage</a></button>
 	</div>
 	</main>
 	<footer>
-			@ArtStore.Produced and maitained by Elinhuang at 2021. 4.16<br>
-			增值电信作业提交许可证 复ss-20302010072号<br>
-			 Git备Elin16号 <br>
-			All rights reserved.<br>
+		<?php include_once('../php/footer.php'); ?>
 	</footer>
 </body>
 <script src="footprint.js"></script>

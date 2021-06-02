@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>result</title>
-		
+	
 		<link type="text/css" rel="stylesheet" href="../cssstyle/css/global.css">
 		<link type="text/css" rel="stylesheet" href="../cssstyle/result.css">
 	</head>
@@ -15,38 +15,12 @@
 				<span id="slogan">Where you find <em>genius</em> and <em>extroordinary</em> </span>
 			</div>
 			<nav>
-				<a href="homepage.html" class="button home">home</a> 
-				<a href="search.html" class="button search">search</a> 
-				<a href="login.html" class="button login">login</a> 
-				<a href="register.html" class="button register">register</a> 
+				<?php include_once('../php/nav.php'); ?>
 			</nav>
 		</header> 
 		<main id="main">
 			<p id="subtitle">Results for <em>Impressionism</em> ...</p>
-			<div class="result">
-				<div class="figure">
-					<img src="../resources/img/339.jpg" width="400px" height="320px" alt="The painting named Luncheon Boating Party">
-				</div>
-				<div class="outfig">
-					<div class="figcap">
-						<p class="title">Dance at Le Moulin de la Galette</p>
-						<p class="artist"><a class="athbut" href="search.html">Pierre Auguste Renoir</a></p>
-						<p class="descreption">
-						Introduce:  Dance at Moulin de la Galette is one of Impressionism’s most highly 
-						revered masterpieces. 
-						</p>
-						<div class="yearOfWork tinfo">Year:  1876</div>
-						<div class="style tinfo">Style:  Impressionism</div>   
-						<div class="widthnheight tinfo">Dimensions: 131cm x 175cm</div>
-						<div class="price tinfo">Price: 400,000,000 USD</div>
-						<div class="like tinfo">Like: 19969</div>
-					</div>
-				<div id="bottons">
-					
-					<button type="button">Add to my collections</button>
-					<button><a href="presentation.html" class="button">More details</a></button>
-				</div>
-				</div>
+			
 			</div>
 			<div class="result">
 				<div class="figure">
@@ -55,7 +29,7 @@
 				<div class="outfig">
 					<div class="figcap">
 						<p class="title">Water Lilies</p>
-						<p class="artist"><a class="athbut" href="search.html">Claude Monet</a></p>
+						<p class="artist"><a class="athbut" href="search.php">Claude Monet</a></p>
 						<p class="descreption">
 						Introduce:  This canvas is one of four water-lily pictures that, quite exceptionally, he did complete, sign, and sell in 1919.
 						</p>
@@ -67,7 +41,7 @@
 					</div>
 				<div id="bottons">
 					<button type="button">Add to my collections</button>
-					<button><a href="presentation.html" class="button">More details</a></button>
+					<button><a href="presentation.php" class="button">More details</a></button>
 				</div>
 				</div>
 			</div>
@@ -78,7 +52,7 @@
 				<div class="outfig">
 					<div class="figcap">
 						<p class="title">The Houses of Parliament (Effect of Fog)</p>
-						<p class="artist"><a class="athbut" href="search.html">Claude Monet</a></p>
+						<p class="artist"><a class="athbut" href="search.php">Claude Monet</a></p>
 						<p class="descreption">
 						Introduce:  In the fall of 1899 and the early months of 1900 and of 1901, Monet executed a series of views of the Thames River in London.
 						</p>
@@ -90,7 +64,7 @@
 					</div>
 				<div id="bottons">
 					<button type="button">Add to my collections</button>
-					<button><a href="presentation.html" class="button">More details</a></button> 
+					<button><a href="presentation.php" class="button">More details</a></button> 
 				</div>
 				</div>
 			</div>
@@ -102,7 +76,7 @@
 				<div class="outfig">
 					<div class="figcap">
 						<p class="title">Luncheon Boating Party</p>
-						<p class="artist"><a class="athbut" href="search.html">Pierre Auguste Renoir</a></p>
+						<p class="artist"><a class="athbut" href="search.php">Pierre Auguste Renoir</a></p>
 						<p class="descreption">
 						Introduce:  The painting depicts a group of Renoir's friends relaxing on a balcony at the Maison Fournaise along the Seine river in Chatou, France.
 						</p>
@@ -114,7 +88,7 @@
 					</div>
 				<div id="bottons">
 					<button type="button">Add to my collections</button>
-					<button><a href="presentation.html" class="button">More details</a></button>
+					<button><a href="presentation.php" class="button">More details</a></button>
 				</div>
 				</div>
 			</div>
@@ -127,10 +101,7 @@
 			</div>
 		</main>
 		<footer>
-				@ArtStore.Produced and maitained by Elinhuang at 2021.4.16<br>
-				增值电信作业提交许可证 复ss-20302010072号<br>
-				 Git备Elin16号 <br>
-				All rights reserved.<br>
+			<?php include_once('../php/footer.php'); ?>
 		</footer>
 	</body>	
 	<script src="footprint.js"></script>

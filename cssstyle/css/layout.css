@@ -67,10 +67,12 @@ form{
 
  }
  #blocks_row .block .outfig{
-       height: 400px;
-      
+       /* height: 400px; */
        align-content: space-between;
  }
+.outfig {
+    min-height: 400px;
+}
  #blocks_row .block .outfig .funcbutton{
        margin-top: auto;
        align-self: center;

@@ -85,5 +85,9 @@ input[type=submit]:hover,button[type=submit]:hover{
        font-size: 1em;
        font-weight: bold;
 }
-
-
+button.display_button{
+       visibility: visible;
+}
+button.undisplay_button{
+       visibility: hidden;
+}

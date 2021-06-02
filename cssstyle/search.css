@@ -7,8 +7,25 @@ form{
        margin-bottom: auto;
        margin-right: auto;
 }
-form input{
+#searchForm input,#searchForm button{
        margin-top: 200px;
        margin-left: 400px;
-       margin-bottom: 200px;
+       margin-bottom: 5px;
+}
+#searchForm button{
+       margin-left: 0;
+}
+
+form input.hasResult{
+       margin-top: 50px;
+       margin-bottom:50px;
+       margin-left: auto;
+} 
+#selectForm{
+       margin-top: 0px;
+       padding-top: 15px;
+       margin-right: 50px;
+}
+#selectForm input{
+       width: auto;
 }
