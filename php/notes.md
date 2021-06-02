@@ -22,3 +22,6 @@ else if(footprint1!=NULL)
 var src="ftp1_"+footprint1+"_eofftp1"+"ftp2_"+thisfootprint+"_eofftp2";
 else var src="ftp1_"+thisfootprint+"_eofftp1";
 ```
+
+头图轮播：
+修改z-index值
