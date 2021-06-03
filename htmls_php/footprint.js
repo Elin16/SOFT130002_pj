@@ -2,7 +2,7 @@ function javascriptInhtml(){
         var HtmlFtp=document.getElementById("footprints");
         if(HtmlFtp==null) console.log("null of id ");
         var thishref=window.location.href.split("/");
-        var thisfootprint="href_"+thishref[thishref.length-1].split("?")[0]+"_eofhref"+"title_"+document.getElementsByTagName("title")[0].innerHTML+"_eoftitle";
+        var thisfootprint="href_"+thishref[thishref.length-1]+"_eofhref"+"title_"+document.getElementsByTagName("title")[0].innerHTML+"_eoftitle";
         var src=getCookie();
         var footprints=src.split(";");
         if(footprints[0]==null||footprints[0]=="") footprints.shift();

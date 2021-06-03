@@ -19,7 +19,6 @@
                 }else{
                         include_once("connect.php");
                         function getListID(){
-                                
                                 return $_POST['addCollectionArtworkID'];
                         }              
                         $query='SELECT * FROM wishlist';

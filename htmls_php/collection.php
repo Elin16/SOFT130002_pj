@@ -69,7 +69,7 @@
                 <img src="../resources/img/'.$rowi[2].'" width="280" height="320" alt="A painting ">
             </div>
             <div class="figcap intro">
-                <p class="title">'.$rowi[3].'</p>
+                <p class="title"><a href="presentation.php?artworkID='.$rowi[0].'">'.$rowi[3].'</a></p>
                 <p class="artist"><a class="athbut" href="search.php">'.$rowi[1].'</a></p>
                 <p class="style">Style : '.$rowi[6].'</p>
                 <p class="addTime">Release Time : '.$rowi[13].'</p>

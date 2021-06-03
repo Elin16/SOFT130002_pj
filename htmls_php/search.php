@@ -19,11 +19,8 @@
 				<span id="slogan">Where you find <em>genius</em> and <em>extroordinary</em> </span>
 			</div>
 			<nav>
-				<button><a href="homepage.php" class="button" id="home">home</a></button>
-			       <button><a href="search.php" class="button" id="search">search</a></button>
-			       <button><a href="login.php" class="button" id="login">login</a></button>
-			       <button><a href="register.php" class="button" id="register">register</a></button> 
-			</nav>
+                            <?php include_once("../php/nav.php");?>
+                     </nav>
 		</header>
               <main id="main">
               
