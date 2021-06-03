@@ -23,7 +23,7 @@
                         }              
                         $query='SELECT * FROM wishlist';
                         $result=mysqli_query($_mysqli,$query);               
-                        $query = 'INSERT INTO wishlist (listID,userID,artworkID) VALUES ('.getListID().','.$_SESSION['userID'].','.$_POST['addCollectionArtworkID'].')';
+                        $query = 'INSERT INTO wishlist (listID,userID,artworkID,addTime) VALUES ('.getListID().','.$_SESSION['userID'].','.$_POST['addCollectionArtworkID'].',NOW())';
                         echo '
                         <script>
                                 console.log("'.$query.'");
