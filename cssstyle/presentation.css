@@ -54,7 +54,7 @@
 }
 #present{
        display: flex;
-       flex-wrap: wrap;
+       flex-wrap: nowrap;
        flex-direction: row;
        justify-items: center;
 }

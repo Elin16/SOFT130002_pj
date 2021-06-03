@@ -31,6 +31,8 @@
               <form method="post" id="selectForm">
                      <input type="radio" name="select" value="view" >view<br>
                      <input type="radio" name="select" value="price">price<br>
+                     <input type="radio" name="select" value="yearOfWork">year of work<br>
+                     <input type="radio" name="select" value="artist">artist<br>
                      <input type="submit">
               </form>
               <div id="results">
