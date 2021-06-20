@@ -7,9 +7,10 @@ if(isset($_GET['select'])){
     $order=" ORDER BY ".$select;
     if($select=="view") $order.=" DESC";
 } else $order="";
-
+//echo $_GET['keyword'].":sdf";
 if(isset($_GET['keyword'])){
-       $keyword=$_GET['keyword'];
+       $keyword=urldecode($_GET['keyword']);
+       //echo $keyword;
        $flag=0;
        $flag=mysqlQuery("title",$keyword,$order,$begin)|mysqlQuery("yearOfWork",$keyword,$order,$begin);
        $flag|=mysqlQuery("artist",$keyword,$order,$begin)|mysqlQuery("genre",$keyword,$order,$begin);
@@ -18,7 +19,7 @@ if(isset($_GET['keyword'])){
        </p>';
 } else defaultPresentation($order,$begin);
 
-function mysqlQuery($col,$keyword,$order='',$begin=1,$itemNumber=2){
+function mysqlQuery($col,$keyword,$order='',$begin=1,$itemNumber=3){
        $query='SELECT * FROM artworks WHERE '.$col.'="'.$keyword.'"'.$order;              
        $result=mysqli_query($GLOBALS['_mysqli'],$query);
        $flag=0;
@@ -63,7 +64,7 @@ function PresenteSelectpageButton($totalItem,$nowIterm,$itemNumber){
        }
 
        $url="../php/search_results.php?begin=";
-
+       urlencode($back);
        $pages=ceil($totalItem/$itemNumber);
        for ($i=1;$i<=$pages;++$i){ //TODO onclick 函数
               if(ceil($nowIterm/$itemNumber)==$i)echo '<li class="active"><a href="';

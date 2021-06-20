@@ -27,10 +27,10 @@
               <main id="main">
               
               <form method="get" id="searchForm">
-                     <input type="text" name="keyword" placeholder="Search for artworks/ artists/ styles ...">
+                     <input type="text" name="keyword" id="keyword" placeholder="Search for artworks/ artists/ styles ...">
                      <button type="submit">search</button>
               </form >
-              <form method="post" id="selectForm">
+              <form method="get" id="selectForm">
                      <input type="radio" name="select" value="view" >view<br>
                      <input type="radio" name="select" value="price">price<br>
                      <input type="radio" name="select" value="yearOfWork">year of work<br>
@@ -47,23 +47,25 @@
                      $url.='"';
                      echo '
                      <script>
-                            $("#results").load('.$url.'); 
+                            $("#results").load(encodeURI('.$url.')); 
                      </script>
                      ';
               ?>
               <script>
+                     $("#searchForm").submit(function(){
+                     var query="../php/search_results.php?keyword="+encodeURI($("#keyword").val());
+                     alert(query);
+                     $("#results").load(query);
+                     return false;
+              });
+              </script>
+
+              <script>
                      $("#selectForm input").click(function(){
-                     <?php
-                     $url=$_SERVER['REQUEST_URI'];
-                     $url_array=explode("?",$url);
-                     $url='../php/search_results.php';
-                     if(count($url_array)>1) $url.="?".$url_array[count($url_array)-1]."&";
-                     else $url.="?select=";
-                     echo '
-                     $("#results").load(
-                            "'.$url.'"+$(this).attr("value"));
-                     ';
-                     ?>
+                     var x="";
+                     if($("#keyword").val()) x="&keyword="+encodeURI($("#keyword").val());
+                     $("#results").load(encodeURI("../php/search_results.php?select="+$(this).attr("value")+x));
+                     return false;
               });
               </script>
               </main> 
