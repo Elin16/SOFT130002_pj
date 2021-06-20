@@ -4,11 +4,11 @@ nav #search{
        background-color: rgba(100,149,237,0.3);
 }
 form{
-       margin-bottom: auto;
+       margin-bottom: 10px;
        margin-right: auto;
 }
 #searchForm input,#searchForm button{
-       margin-top: 200px;
+       margin-top: 20px;
        margin-left: 400px;
        margin-bottom: 5px;
 }

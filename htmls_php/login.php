@@ -21,12 +21,7 @@
                 validate = 0;
             }
             return validate;
-        }
-        function success(){
-            alert("LOGIN!");
-            if(history.length>2) history.go(-2);
-            else location.href="homepage.php";
-        }
+        }    
         function failed(){
             alert("failed");
             $("#info").html('INCORRECT login information.Please try again.');
@@ -38,13 +33,9 @@
             return true;
         }
     </script>
+    <script>
     <?php
-    $servername = "127.0.0.1";
-    $username = "username";
-    $password = "password";
-    $dbname = "artworklab";
-    $_mysqli = mysqli_connect('localhost','root','');
-    mysqli_select_db($_mysqli,$dbname);
+    include_once("../php/connect.php");
     if(isset($_POST['username'])){
         //   echo $_POST['username']."=".$_POST['password']."<br>";
         $result = mysqli_query($_mysqli,"SELECT * FROM users WHERE name="."'".$_POST['username']."'");
@@ -52,33 +43,13 @@
             $row=mysqli_fetch_row($result);
             $db_password=$row[3];
             if($_POST['password']==$db_password){
-                $lifeTime = 4 * 3600;
-                session_set_cookie_params($lifeTime);
-                session_start();
-                $_SESSION["userID"] = $row[0];
-                echo "
-                <script>
-                success();
-                </script>
-            ";
-            //  注册登陆成功的 user ID
-            
-            }else{
-                echo "
-                <script>
-                failed();
-                </script>
-            ";
-            }
-        }else{
-            echo "
-            <script>
-            failed();
-            </script>
-        ";
-        }
+                $userID=$row[0];//  注册登陆成功的 user ID
+                include_once("../php/user_login.php");
+            }else echo "failed();";           
+        }else echo "failed();";
     }
     ?>
+    </script>
 </head>
 
 <body id="allcontent">

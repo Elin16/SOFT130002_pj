@@ -36,6 +36,8 @@
     <div id="slidebar">
         <?php
             session_start();
+            
+
             include_once("../php/connect.php");
             $query="SELECT artworkID FROM wishlist WHERE userID='".$_SESSION['userID']."'";
             $query="SELECT * FROM users WHERE userID='".$_SESSION['userID']."'";

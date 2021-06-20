@@ -18,11 +18,16 @@ nav #home{
        animation-duration: 15s;
        animation-iteration-count: infinite;*/
 }
-
+#headimginfo{
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size: large;
+}
 #headimgback:hover{
        animation-play-state: paused;
 }
- 
+#blocks_row{
+       padding-top: 50px;
+}
 .outfig{
        display: -webkit-flex;
        display: flex;
@@ -34,40 +39,3 @@ nav #home{
 .funcbutton{
        justify-self: end;
 }
-/*
-@-webkit-keyframes change{
-       from{
-              background-image: url(../resources/img/39.jpg);
-       }
-       20%{
-              background-image: url(../resources/img/152.jpg);
-       }
-       40%{
-              background-image: url(../resources/img/70.jpg);
-       }
-       60%{
-              background-image: url(../resources/img/339.jpg);
-       }
-       to{
-              background-image: url(../resources/img/39.jpg);
-       }
-
-}
- @keyframes change{
-       from{
-              background-image: url(../resources/img/39.jpg);
-       }
-       20%{
-              background-image: url(../resources/img/152.jpg);
-       }
-       40%{
-              background-image: url(../resources/img/70.jpg);
-       }
-       60%{
-              background-image: url(../resources/img/339.jpg);
-       }
-       to{
-              background-image: url(../resources/img/39.jpg);
-       }
- }
- */

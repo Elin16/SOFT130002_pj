@@ -20,12 +20,11 @@ function is_login(){
         hidden(document.getElementById("register"),"register");
         display(document.getElementById("logout"),"logout");
         display(document.getElementById("collection"),"collection");
-
 }
 function not_login(){
-                console.log("no user");
-                display(document.getElementById("login"),"login");
-                display(document.getElementById("register"),"register");
-                hidden(document.getElementById("logout"));
-                hidden(document.getElementById("collection"));
+        console.log("no user");
+        display(document.getElementById("login"),"login");
+        display(document.getElementById("register"),"register");
+        hidden(document.getElementById("logout"));
+        hidden(document.getElementById("collection"));
 }

@@ -18,12 +18,12 @@
                         ';
                 }else{
                         include_once("connect.php");
-                        function getListID(){
-                                return $_POST['addCollectionArtworkID'];
+                        function getListID($artworkID){
+                                return $artworkID*10000+$_SESSION['userID'];
                         }              
                         $query='SELECT * FROM wishlist';
                         $result=mysqli_query($_mysqli,$query);               
-                        $query = 'INSERT INTO wishlist (listID,userID,artworkID,addTime) VALUES ('.getListID().','.$_SESSION['userID'].','.$_POST['addCollectionArtworkID'].',NOW())';
+                        $query = 'INSERT INTO wishlist (listID,userID,artworkID,addTime) VALUES ('.getListID($_POST['addCollectionArtworkID']).','.$_SESSION['userID'].','.$_POST['addCollectionArtworkID'].',NOW())';
                         echo '
                         <script>
                                 console.log("'.$query.'");
@@ -47,7 +47,10 @@
         }
 
         if(isset($_POST['removeCollectionArtworkID'])){
-                if(!isset($_SESSION['userID'])){
+            function getListID($artworkID){
+                return $artworkID*10000+$_SESSION['userID'];
+            }
+            if(!isset($_SESSION['userID'])){
                         unset($_POST['removeCollectionArtworkID']);
                         echo'
                         <script>
@@ -56,11 +59,12 @@
                         ';
                 }else{
                         include_once("connect.php");
-                        $query=' SELECT * FROM wishlist WHERE artworkID="'.$_POST['removeCollectionArtworkID'].'"';
+                        
+                        $query=' SELECT * FROM wishlist WHERE artworkID="'.getListID($_POST['removeCollectionArtworkID']).'"';
                         $result=mysqli_query($_mysqli,$query);
                         $row=mysqli_fetch_row($result);
                         if($row){                    
-                            $query = 'DELETE FROM wishlist WHERE artworkID="'.$_POST['removeCollectionArtworkID'].'"';
+                            $query = 'DELETE FROM wishlist WHERE artworkID="'.getListID($_POST['removeCollectionArtworkID']).'"';
                             $result=mysqli_query($_mysqli, $query);
                             ///$_POST['removeCollectionArtworkID']=NULL;
                             unset($_POST['removeCollectionArtworkID']);

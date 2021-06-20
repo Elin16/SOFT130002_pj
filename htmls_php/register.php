@@ -6,6 +6,7 @@
 	<link type="text/css" rel="stylesheet" href="../cssstyle/css/global.css">
 	<link type="text/css" rel="stylesheet" href="../cssstyle/login.css">
 	<link type="text/css" rel="stylesheet" href="../cssstyle/register.css">
+	<script src="jquery.js"></script>
 	<script>
 		function validateForm(){
 			var validate=1;
@@ -13,48 +14,45 @@
   			var atpos=x.indexOf("@");
   			var dotpos=x.lastIndexOf(".");
   			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
-    				alert("不是一个有效的 e-mail 地址");
+				$('#emailMessage').html("Not a valid e-mail address");
     				validate=0;
-			}
+			}else  $('#emailMessage').html("");
 			var x=document.forms["myForm"]["username"].value;
 			if (x==null || x==""){
-				alert("Usename must be filled");
+				$('#usernameMessage').html("Usename must be filled");
 				validate=0;
-			} 
-			var x=document.forms["myForm"]["area"].value;
+			} else $('#usernameMessage').html("");
+			var x=document.forms["myForm"]["address"].value;
 			if (x==null || x==""){
-				alert("Area must be filled");
+				$('#addressMessage').html("Address must be filled");
 				validate=0;
-			} 
+			} else $('#addressMessage').html("");
+			var x=document.forms["myForm"]["tel"].value;
+			if (x==null || x==""){
+				$('#telMessage').html("Telephone must be filled");
+				validate=0;
+			} else $('#telMessage').html("");
 			var x1=document.forms["myForm"]["password"].value;
 			if (x1==null || x1==""){
-				alert("Usename must be filled");
+				$('#pwdMessage').html("Password must be filled");
 				validate=0;
-			}
+			}else $('#pwdMessage').html("");
 			var numberCheck=/\d+/;
 			var stringCheck=/[a-zA-Z]/;
 			if(!numberCheck.test(x1)||!stringCheck.test(x1)){
-				alert("Password must include both Number and Letter");
+				$('#pwdMessage').html("Password must include both Number and Letter");
 				validate=0;
-			}
+			}else $('#pwdMessage').html("");
 			//alert(numberCheck.test(x1));
 			//console.log(x1,"-",numberCheck.test(x1),"-",numberCheck.test(x1),"\n");
 			var x2=document.forms["myForm"]["passwordagain"].value;
-			if (x2==null || x2==""){
-				alert("Password must be filled again");
+			if (x2==null || x2==""||x1!=x2){
+				$('#pwdaMessage').html("Password must be filled again");
 				validate=0;
-			}
-			if(x1!=x2){
-				alert("The tow password DONOT match!");
-				validate=0;
-			} 
-			
+				if(x1!=x2) $('#pwdaMessage').html("The tow password DONOT match!");
+			} else $('#pwdaMessage').html("");
+			alert("ww s a re2 "+validate);
 			return validate;
-		}
-		function submitForm(){
-			var x=validateForm();
-			if(x==1) alert("You are a member of ArtStore now !");
-			else alert("Please fill the form correctly ");
 		}
 	</script>
 </head>
@@ -66,16 +64,56 @@
 
 	<main id="main">
 		<div id="signup">
-			<form id="container" name="myForm" onsubmit="submitForm();">
+			<form id="container" name="myForm" method="post">
 			  <label id="subtitle">Sign up for Art store</label>
 			  <input type="email" placeholder="test@mailbox.com" name="email">
+			  <div class="hintMessage" id="emailMessage"></div> 
+			  
 			  <input type="text" name="username" placeholder="username">
-			  <input type="text" name="area" placeholder="area">
+			  <div class="hintMessage" id="usernameMessage"></div> 
+			 
+			  <input type="text" name="address" placeholder="address">
+			  <div class="hintMessage" id="addressMessage"></div> 
+			 
+			  <input type="text" name="tel" placeholder="telephone">
+			  <div class="hintMessage" id="telMessage"></div> 
+			 
 			  <input type="password" name="password" placeholder="password   number and letter required ">
+			  <div class="hintMessage" id="pwdMessage"></div> 
+			 
 			  <input type="password" name="passwordagain" placeholder="password again">
-			  <input class="button-primary" type="submit" value="Submit">
+			  <div class="hintMessage" id="pwdaMessage"></div> 
+			  
+			  <input class="button-primary" type="submit" value="Submit" id="formSubmit">
 			</form>
-		</div>
+		</div>	
+		<div id="bottomMessage" class="hintMessage"></div>
+		<script>
+			$('#container').submit(function(){
+				var flag=validateForm();
+				if(flag==0){
+                    		$('#bottomMessage').html("Please fill the form correctly "); 
+				}else{
+                    $('#bottomMessage').html(" fill the form correctly ");
+                    var formData = $("#container").serialize();
+					console.log(formData);
+					$.post("../php/register_service2.php",formData,function(data){
+						alert(data);
+				        	if(data=="success"){
+							$('#bottomMessage').html("success!");
+							setTimeout(function(){
+                						alert("Login Successfully!");
+                						if(history.length>2) history.go(-2);
+                						else location.href="homepage.php";
+           						},3000);
+						} 
+				        	else $('#usernameMessage').html(" Username has been used, please choose another name!");
+                     			});
+				}
+				return false;
+			});
+		</script>
+
 	<div id="funcbutton">
 		<button><a href="login.php" class="button">Login for Artstore</a></button>
 		<button><a href="  homepage.php" class="button">Return to Homepage</a></button>

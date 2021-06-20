@@ -23,11 +23,11 @@
 			<div id="headimg">
 				<?php
 					echo '<div id="headimgback"><a id="topPhotoHref" href="presentation.php?artworkID=51"><img id="topPhoto" src=""></a></div>';
+					echo '<div id="headimginfo"></div>';
 				?>
 			</div>
-            
-		<div id="blocks_row">
-<?php
+		<div id="blocks_row">	
+<?php	//最新图片展示 orderBy TimeReleased
 	include_once("../php/connect.php");
 	$query='SELECT  *  FROM  artworks  ORDER BY  timeReleased DESC ';
 	$result=mysqli_query($_mysqli, $query);
@@ -69,9 +69,11 @@
 </footer>
 </body>	
 	<script>
-		//function preloadImg(){ 预先载入头图的轮播图片
-			var imgArry=[
+		//function preloadImg(){ 预先载入头图的轮播图片	
+			var imgArry=[	//获得头图资源访问目录
 				<?php 
+					//include_once("../php/topimg.php");
+					//getImgInfo(2);
 					include_once("../php/connect.php");	
 					$query="SELECT * FROM artworks ORDER BY view DESC";
 					$result=mysqli_query($_mysqli,$query);
@@ -83,8 +85,9 @@
 					}
 				?>
 			];
-			var urlArry=[
+			var urlArry=[		//获得头图详情连接
 				<?php 
+					//getImgInfo(0);
 					include_once("../php/connect.php");	
 					$query="SELECT * FROM artworks ORDER BY view DESC";
 					$result=mysqli_query($_mysqli,$query);
@@ -96,26 +99,38 @@
 					}
 				?>
 			];
+			var imginfoArry=[	//获得头图简介信息
+				<?php 
+					//getImgInfo(0);
+					include_once("../php/connect.php");	
+					$query="SELECT * FROM artworks ORDER BY view DESC";
+					$result=mysqli_query($_mysqli,$query);
+					for($i=0;$i<5;++$i){
+						$row=mysqli_fetch_row($result);
+						echo '"Auther: '.$row[1].'; Title: '.$row[3].';  Style: '.$row[6].'."';
+						if ($i==4) echo '';
+						else echo ',';
+					}
+				?>
+			];
 			var imgs = [];
 			for(var i=0;i<imgArry.length;++i){
-				imgs[i]=new Image();
+				imgs[i]=new Image();	// 生成图片对象
 				imgs[i].src= imgArry[i];
 				imgs[i].longDesc= urlArry[i];
+				//imgs[i].info=imginfoArry[i];
 			}
 
 		//}
-		var orderimg=0;
+		var orderimg=0;		//全局变量，设置当前展示的图片序号
 		function playImgs(){
 			var imgobj=$('#topPhoto');
-			///alert("asdf"+$('#topPhoto').attr('src')+"ADSf");
-			//while(true){
 			$('#topPhotoHref').attr('href',imgs[orderimg].longDesc);
 			$('#topPhoto').attr('src',imgs[orderimg].src); 
+			$('#headimginfo').text(imginfoArry[orderimg]);
 			orderimg+=1;
 			orderimg%=4;
-			//imgobj=imgs[0];
-			//}
-			setTimeout("playImgs()",1500);
+			setTimeout("playImgs()",1500);	//调用自身
 		}
 		playImgs();
 		
