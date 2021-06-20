@@ -72,7 +72,7 @@ function PresenteSelectpageButton($totalItem,$nowIterm,$itemNumber){
               echo $url.(($i-1)*$itemNumber+1).$back.'" ';
               echo ' onclick="function(){alert("!");}">'.$i.'</a></li>';
        }
-       echo "total = ".$totalItem;
+       ///echo "total = ".$totalItem;
        echo '
        <li class="disabled"><a href="#">&raquo;</a></li>
        </ul>

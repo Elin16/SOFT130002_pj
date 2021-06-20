@@ -59,24 +59,22 @@
                         ';
                 }else{
                         include_once("connect.php");
-                        
-                        $query=' SELECT * FROM wishlist WHERE artworkID="'.getListID($_POST['removeCollectionArtworkID']).'"';
+                        $query=' SELECT * FROM wishlist WHERE listID="'.getListID($_POST['removeCollectionArtworkID']).'"';
                         $result=mysqli_query($_mysqli,$query);
                         $row=mysqli_fetch_row($result);
                         if($row){                    
-                            $query = 'DELETE FROM wishlist WHERE artworkID="'.getListID($_POST['removeCollectionArtworkID']).'"';
+                            $query = 'DELETE FROM wishlist WHERE listID="'.getListID($_POST['removeCollectionArtworkID']).'"';
                             $result=mysqli_query($_mysqli, $query);
                             ///$_POST['removeCollectionArtworkID']=NULL;
                             unset($_POST['removeCollectionArtworkID']);
                             echo $query." ; ".$result.";";
                             echo'<script>
                                         alert("删除成功");
-                                        //toggleFormClass();
-                                        //histroy.go(-2);
                                         location.reload();
                                 </script>
                                ';
                         }else {
+                            ///echo '<script>alert("no success select ");</script>';
                             unset($_POST['removeCollectionArtworkID']);
                             return ;
                         }
